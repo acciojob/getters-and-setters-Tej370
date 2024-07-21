@@ -1,9 +1,35 @@
 //complete this code
-class Person {}
+class Person {
+	constructor(name,age){
+		this._name = name;
+		this._age = age;
+	}
 
-class Student extends Person {}
+	get(){
+		return this._name;
+	}
 
-class Teacher extends Person {}
+	set age(value){
+		if(type of age !== "number" || value < 0)
+	 console.log("Enter a Valid number")
+		else {
+			this._age = value;
+		}
+	}
+}
+
+
+class Student extends Person {
+	study(){
+		console.log(this._name + " is studying")
+	}
+}
+
+class Teacher extends Person {
+	teach(){
+		console.log(this._name + " is teaching")
+	}
+}
 
 // Do not change the code below this line
 window.Person = Person;
