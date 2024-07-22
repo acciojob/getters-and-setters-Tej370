@@ -1,37 +1,34 @@
-//complete this code
 class Person {
-  constructor(name, age) {
-    this._name = name;
-    this._age = age;
-  }
+	constructor(name,age){
+		this._name=name;
+		this._age=age;
+	}
+	
+	get name(){
+	         return this._name;
+		}
 
-  // Getter for name
-  get name() {
-    return this._name;
-  }
-
-  // Setter for age
-  set age(value) {
-    if (typeof value !== 'number' || value < 0) {
-      console.log("Please enter a valid age.");
-    } else {
-      this._age = value;
-    }
+		set age(value){
+			this._age=value;
+		}
 }
 
 
-class Student extends Person {study(){
-	console.log(`${this.name} is studying`);
-}
+
+class Student extends Person {
+	study(){
+		console.log(${this.name} is studying);
+	}
 }
 
 class Teacher extends Person {
-	  teach() {
-    console.log(`${this.name} is teaching`);
-  }
+	teach(){
+		console.log(${this.name} is teaching);
+	}
 }
+
 
 // Do not change the code below this line
 window.Person = Person;
 window.Student = Student;
-window.Teacher = Teacher;
+window.Teacher = Teacher;
